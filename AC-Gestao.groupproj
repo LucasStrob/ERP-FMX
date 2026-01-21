@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A6E23D27-4B42-4220-A44A-88F8514E1C57}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ACERP.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ACERP">
+        <MSBuild Projects="ACERP.dproj"/>
+    </Target>
+    <Target Name="ACERP:Clean">
+        <MSBuild Projects="ACERP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ACERP:Make">
+        <MSBuild Projects="ACERP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ACERP"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ACERP:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ACERP:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

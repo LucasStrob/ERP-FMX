@@ -1,0 +1,13 @@
+{
+	"name": "ac-erp",
+	"description": "",
+	"version": "1.0.0",
+	"homepage": "",
+	"mainsrc": "./src",
+	"projects": [],
+	"dependencies": {
+		"https://github.com/academiadocodigo/router4delphi": "^1.1.3",
+		"https://github.com/alepmedeiros/chart4delphi": "^v1.0.0",
+		"https://github.com/gabrielbaltazar/gbjson": "^1.0.11"
+	}
+}
