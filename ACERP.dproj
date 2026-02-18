@@ -242,6 +242,20 @@
             <Form>PageLogin</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="src\view\components\editImage\acerp.view.components.editImage.pas">
+            <Form>ComponentEditImage</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="src\view\pages\tables\acerp.view.pages.tables.pas">
+            <Form>PageTables</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="src\view\components\tables\acerp.view.components.extendedTable.pas">
+            <Form>ComponentExtendedTable</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
         <RcItem Include="src\assets\seta-triangular-apontada-para-baixo.png">
             <ResourceType>RCDATA</ResourceType>
             <ResourceId>setabaixo</ResourceId>
@@ -305,6 +319,10 @@
         <RcItem Include="src\assets\blocked.png">
             <ResourceType>RCDATA</ResourceType>
             <ResourceId>bloquear</ResourceId>
+        </RcItem>
+        <RcItem Include="src\assets\tables.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>tables</ResourceId>
         </RcItem>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -445,6 +463,12 @@
                 </DeployFile>
                 <DeployFile LocalName="src\assets\seta-triangular-apontada-para-baixo.png" Configuration="Debug" Class="ProjectFile"/>
                 <DeployFile LocalName="src\assets\seta-triangular-apontada-para-baixo.png" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\assets\tables.png" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>

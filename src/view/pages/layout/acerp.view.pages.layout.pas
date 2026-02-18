@@ -39,7 +39,7 @@ uses acerp.view.components.sidebar, acerp.view.pages.home;
 function TPageLayout.Render: TFMXObject;
 begin
   RenderSideBar;
-  TRouter4D.Render<TPageHome>.SetElement(lytBody,lytBody);
+  TRouter4D.Render<TPageHome>.SetElement(lytBody);
   Result := lytContainer;
 end;
 

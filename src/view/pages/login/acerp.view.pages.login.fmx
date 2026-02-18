@@ -107606,6 +107606,16 @@ object PageLogin: TPageLogin
                 TextSettings.HorzAlign = Center
                 Text = 'Iniciar'
                 TabOrder = 0
+                object Layout18: TLayout
+                  Align = Contents
+                  Cursor = crHandPoint
+                  HitTest = True
+                  Size.Width = 280.000000000000000000
+                  Size.Height = 30.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 4
+                  OnClick = Layout18Click
+                end
               end
             end
           end

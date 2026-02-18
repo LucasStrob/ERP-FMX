@@ -6,7 +6,8 @@ uses
   acerp.view.pages.home,
   acerp.view.pages.layout,
   acerp.view.pages.pessoas,
-  acerp.view.pages.login;
+  acerp.view.pages.login,
+  acerp.view.pages.tables;
 
 type
 
@@ -33,7 +34,8 @@ begin
     .Router('Layout', TPageLayout)
     .Router('Home', TPageHome)
     .Router('Pessoas', TPagePessoas)
-    .Router('Login', TPageLogin);
+    .Router('Login', TPageLogin)
+    .Router('Tables', TPageTables);
 
 
 end;

@@ -32,7 +32,6 @@ object PageLayout: TPageLayout
           Position.Y = 16.000000000000000000
           TabOrder = 0
           Text = 'Button1'
-          TextSettings.Trimming = None
         end
       end
       object lytBody: TLayout

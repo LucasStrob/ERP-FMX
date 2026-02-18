@@ -22,8 +22,8 @@ type
     lytSubMenu: TLayout;
     lytButton: TLayout;
     fotoPerfil: TCircle;
-    procedure lytButtonResized(Sender: TObject);
     procedure lytButtonClick(Sender: TObject);
+    procedure lytContainerResize(Sender: TObject);
   private
     FHeight: Single;
     FComposite: Boolean;
@@ -142,7 +142,7 @@ begin
   ChamaSubMenu(Sender);
 end;
 
-procedure TComponentButton.lytButtonResized(Sender: TObject);
+procedure TComponentButton.lytContainerResize(Sender: TObject);
 begin
   StyleMenu;
 end;
@@ -175,14 +175,27 @@ end;
 procedure TComponentButton.StyleMenu;
 begin
   lytImageMenu.Visible := False;
-  if not (lytContainer.Width > 80) then
+
+  if FComposite = True then
+  begin
+    if not (lytContainer.Width > 80) then
+      lytImageMenu.Visible := False
+    else
+      lytImageMenu.Visible := True;
+
+
+  end;
+
+
+
+ { if not (lytContainer.Width > 80) then
   begin
     lytImageMenu.Visible := False;
     exit;
   end;
 
   if FComposite then
-    lytImageMenu.Visible := True;
+    lytImageMenu.Visible := True;}
 end;
 
 function TComponentButton.SubMenu(Value: TObjectList<TFMXObject>): TComponentButton;

@@ -20,7 +20,10 @@ uses
   acerp.view.components.edit in 'src\view\components\edit\acerp.view.components.edit.pas' {ComponentEdit: TFrame},
   acerp.view.index in 'src\view\acerp.view.index.pas' {PageIndex},
   acerp.view.components.interfaces in 'src\view\components\acerp.view.components.interfaces.pas',
-  acerp.view.pages.login in 'src\view\pages\login\acerp.view.pages.login.pas' {PageLogin};
+  acerp.view.pages.login in 'src\view\pages\login\acerp.view.pages.login.pas' {PageLogin},
+  acerp.view.components.editImage in 'src\view\components\editImage\acerp.view.components.editImage.pas' {ComponentEditImage: TFrame},
+  acerp.view.pages.tables in 'src\view\pages\tables\acerp.view.pages.tables.pas' {PageTables},
+  acerp.view.components.extendedTable in 'src\view\components\tables\acerp.view.components.extendedTable.pas' {ComponentExtendedTable: TFrame};
 
 {$R *.res}
 

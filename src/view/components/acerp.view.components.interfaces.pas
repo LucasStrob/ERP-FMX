@@ -3,7 +3,7 @@ unit acerp.view.components.interfaces;
 interface
 
 uses
-  System.UITypes, FMX.Types;
+  System.UITypes, FMX.Types, System.SysUtils;
 
 type
   TEditMargins = record
@@ -23,7 +23,7 @@ type
     function FontColor(Value: TAlphaColor = $FF000000): iEdits;
     function BackgroundColor(Value: TAlphaColor = $FFFFFFFF): iEdits;
     function Enable(Value: Boolean = false): iEdits;
-//    function Change(Value: TProc<TObject>): iEdits;
+    function Change(Value: TProc<TObject>): iEdits;
     function Alinhamento(Value: TAlignLayout): iEdits;
     function VertText(Value: TTextAlign): iEdits;
     function HorzText(Value: TTextAlign): iEdits;
@@ -32,6 +32,9 @@ type
     function Titulo(Value: String): iEdits;
     function FontColorTitulo(Value: TAlphaColor = $FFE3E3E3): iEdits;
     function PlaceHolder(Value: String): iEdits;
+    function Image(Value: String): iEdits;
+    function ImageColor(Value: TAlphaColor): iEdits;
+    function Password(Value: Boolean): iEdits;
     function Build: TFmxObject;
   end;
 

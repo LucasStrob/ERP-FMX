@@ -46,9 +46,10 @@ end;
 
 procedure TComponentSideBar.ConstruirMenu;
 begin
-  var lListaBotoes := TObjectList<TFMXObject>.Create;
+  var lListaBotoesCadastro := TObjectList<TFMXObject>.Create;
+  var lListaBotoesTabelas := TObjectList<TFMXObject>.Create;
 
-  lListaBotoes.Add(
+  lListaBotoesCadastro.Add(
     TComponentButton.New(self)
     .Nome('Pessoas')
     .SingleButton
@@ -62,16 +63,19 @@ begin
     .Component
     );
 
-  lytMenu.AddObject(
-    TComponentButton.New(Self)
-    .Nome('cadastros')
-    .CompositeButton
-    .SubMenu(lListaBotoes)
-    .Descricao('Cadastros')
-    .Image('cadastros')
+  lListaBotoesTabelas.Add(
+    TComponentButton.New(self)
+    .Nome('Tabelas')
+    .SingleButton
+    .Descricao('Tabela Simples')
+    .Image('tables')
     .ColorDefault($FFFFFFFF)
-    .Alinhamento(TAlignLayout.Top)
-    .Component);
+    .Click(procedure (Sender: TObject)
+    begin
+      TRouter4D.Link.&To('Tables')
+    end)
+    .Component
+    );
 
 
   lytMenu.AddObject(
@@ -89,6 +93,29 @@ begin
     .Alinhamento(TAlignLayout.Top)
     .Component);
 
+  lytMenu.AddObject(
+    TComponentButton.New(Self)
+    .Nome('Tables')
+    .CompositeButton
+    .SubMenu(lListaBotoesTabelas)
+    .Descricao('Tabelas')
+    .Image('tables')
+    .ColorDefault($FFFFFFFF)
+    .Alinhamento(TAlignLayout.Top)
+    .Component);
+
+
+  lytMenu.AddObject(
+    TComponentButton.New(Self)
+    .Nome('cadastros')
+    .CompositeButton
+    .SubMenu(lListaBotoesCadastro)
+    .Descricao('Cadastros')
+    .Image('cadastros')
+    .ColorDefault($FFFFFFFF)
+    .Alinhamento(TAlignLayout.Top)
+    .Component);
+
 end;
 
 procedure TComponentSideBar.ConstruirPerfil;
@@ -96,7 +123,7 @@ begin
   lytProfile.AddObject(
     TComponentButton.New(Self)
       .Nome('perfil')
-      .Perfil('lucas')
+      .Perfil('Lucas')
       .Descricao('Lucas Strob')
       .ColorDefault($FFFFFFFF)
       .Component

@@ -8,6 +8,7 @@ object ComponentButton: TComponentButton
     Size.Height = 60.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
+    OnResize = lytContainerResize
     object Layout1: TLayout
       Align = Top
       Padding.Left = 20.000000000000000000
@@ -105,7 +106,6 @@ object ComponentButton: TComponentButton
         Size.Height = 65.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
-        OnResized = lytButtonResized
         OnClick = lytButtonClick
       end
     end
